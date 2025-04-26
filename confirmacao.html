@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script>
+    window.onload = function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const produto = urlParams.get('produto') || 'Produto';
+      const tamanho = urlParams.get('tamanho') || 'Tamanho não informado';
+      const valor = urlParams.get('valor') || 'Valor não informado';
+
+      const mensagem = `Quero comprar o ${produto} Tamanho: ${tamanho} Preço: ${valor}\n\nPague agora através do link: https://mpago.la/1BwWKc3`;
+      const numero = '5522992110410'; // Número com DDD
+
+      const linkWhatsapp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+      window.location.href = linkWhatsapp;
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecionando para o WhatsApp...</p>
+</body>
+</html>

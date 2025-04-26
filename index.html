@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Quebrada Chic</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="product-card">
+    <img src="https://via.placeholder.com/400x250" alt="Produto 1" class="product-image">
+    <div class="product-info">
+      <div class="product-name">Tênis Nike Air Max</div>
+      <div class="product-price" id="preco-airmax">R$ 2,00</div>
+      <label for="size-airmax">Escolha o Tamanho:</label>
+      <select id="size-airmax" onchange="checkAvailability('airmax')">
+        <option value="">Selecione</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+      </select>
+      <p id="availability-airmax"></p>
+      <div class="cta-buttons">
+        <button class="cta-button" onclick="finalizarCompra('airmax')">Comprar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
